@@ -1,0 +1,33 @@
+.heading-name{
+  font-size: 2em;  
+}
+
+.card-stacked{
+  text-align: center;  
+}
+
+.bio-heading{
+  font-size: 3em;
+  text-align: center;
+}
+
+.bio-sub-heading{
+  font-size: 2em;
+}
+
+.bio-details{
+  font-size: 1.2em;
+}
+.bio-tags-icons{
+  font-size: 4em;
+  text-align: center;
+
+}
+
+.bio-tags-icons-heading{
+  font-weight: 600;
+}
+
+nav{
+  background-image: linear-gradient(90deg, hsl(160,20%,40%), hsl(160,40%,40%) )
+}

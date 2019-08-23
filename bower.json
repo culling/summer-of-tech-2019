@@ -1,0 +1,25 @@
+{
+  "name": "simpleSites",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "culling <culling66@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/culling/SimpleSite",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "react": "^15.4.2",
+    "d3": "^3.0.0",
+    "topojson": "^2.0.0",
+    "d3-geo-projection": "^0.2.16",
+    "materialize": "^0.99.0"
+  }
+}

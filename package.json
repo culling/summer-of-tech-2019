@@ -1,0 +1,22 @@
+{
+  "name": "simpleSites",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "postinstall": "bower install",
+    "build-css": "node-sass --include-path scss public/scss/main.scss public/main.css",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch-sass": "nodemon -e scss -w public/scss -x npm run build-css",
+    "watch": "npm run watch-sass"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bower": "^1.8.0",
+    "express": "^4.14.1",
+    "node-sass": "^4.5.1"
+  }
+}
