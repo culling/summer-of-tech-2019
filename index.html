@@ -1,0 +1,58 @@
+<html>
+
+<head>
+  <title>Summer of tech</title>
+  <!--
+      Get jQuery via CDN (https://jquery.com/)
+      jQuery is a js framework that gives us some easy to use
+      functions for interacting with webpages and APIs
+    -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+  <!-- Load our files -->
+  <script type="text/javascript" src="index.js"></script>
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+  <!-- TODO: Say something interesting in the heading tag... -->
+  <br />
+
+
+  <div class="jumbotron container">
+    <h1>Summer of Tech</h1>
+    <br />
+    <div class="date-div">Date: <span class="date"></span>
+    </div>
+    <div class="container">
+      <div class="timer-container">
+        <span class="timer-label">Timer: </span><span class="timer"> </span>
+      </div>
+      <div class="purple">
+        <span>This text should be purple</span>
+      </div>
+    </div>
+    <button id="animal-trivia-btn">Show me some animal trivia!</button>
+
+    <div id="results-area"></div>
+    <div id="question-display"></div>
+    <div id="answer-display"></div>
+
+    <br />
+    <div>
+      <!--button id="trademe-jobs-btn">Trade Me Jobs</button -->
+      <div>
+        <span>Github Username:<input id="github-username-input"></input></span>
+      </div>
+      <button id="github-btn">Get from GitHub</button>
+      <div class="github-projects-container container">
+        <h3>Projects</h3>
+        <div id="projects-target"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
