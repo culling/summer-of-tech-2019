@@ -68,7 +68,7 @@ function Tree(treeCentreX, treeBranchLevels, treeHeight){
                 fill );//top
       
       //branches
-      let treeBranchHeightStart = 50;
+      let treeBranchHeightStart = 20;
       let branchWidth = 120;
       
       //Branch Color
