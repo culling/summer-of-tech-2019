@@ -20,12 +20,27 @@ function pad(n, width) {
   return (paddingZeros + n);
 }
 
+function scoring(){
+  let q1 = $('input[name=carusage]:checked').val();
+  if(q1 === "option2"){
+    $(".plant").hide()
+  }
+  $(".solutions").show()
+  $(".questions").hide()
+
+}
+
 
 // $(...) will run the function you give it when the page is loaded & ready
 $(function () {
   // console.log will log a message or object to the browser developer console
   console.log("page loaded...");
   printCurrentDate();
+
+$(".solutions").hide()
+$(".submit").click(() => scoring())
+
+
 
 
 });
