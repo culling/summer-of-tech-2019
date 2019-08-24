@@ -20,7 +20,7 @@ function pad(n, width) {
   return (paddingZeros + n);
 }
 
-let treesCount = 20;
+let treesCount = 3;
 let background = new Background();
 
 // $(...) will run the function you give it when the page is loaded & ready
@@ -30,8 +30,8 @@ $(function () {
   printCurrentDate();
   background.drawTrees(treesCount);
   
-  $("#kill-tree-btn").click(function(){
-    treesCount--;
+  $("#plant-tree-btn").click(function(){
+    treesCount++;
     background.drawTrees(treesCount);    
   });
 

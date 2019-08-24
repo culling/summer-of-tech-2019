@@ -6,9 +6,17 @@
   <script src="lib/nvd3/build/nv.d3.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    crossorigin="anonymous">
+
+  <!--CSS and Bootstrap-->
   <link rel="stylesheet" type="text/css" href="index.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
 </head>
 
 <body>
@@ -26,8 +34,9 @@
       <br><br>
       <div id="canvas-container" class="canvas-container">
         <canvas id="canvas" height=200 width=200></canvas>
+        <button id="plant-tree-btn" class="btn btn-primary btn-lg">Plant a Tree</button>
       </div>
-      <button id="kill-tree-btn" class="btn btn-primary btn-lg">Kill a Tree</button>
+
       <h3>Do you use a car?</h3>
       <hr class="my-4">
       <p>What do you mainly use it for?</p>
@@ -120,10 +129,10 @@
     <svg id="graph-example-01" height=300 width=300></svg>
 
     <script src="js/visualisation.js"></script>
-  
+
     <!-- Load Main-->
     <script type="text/javascript" src="js/main.js"></script>
-  
+
 
   </div>
 
