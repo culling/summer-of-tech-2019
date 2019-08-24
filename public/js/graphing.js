@@ -25,12 +25,13 @@ function covertUsageToYearlyCarbon(kwh, km){
 /**
  * Takes weekly hours spent in a car into average year distance driven. 
  * @param weeklyHours hours spent in car. 
- * @returns {number} totaly distance driven over the year.
+ * @returns {number} total distance driven over the year.
  */
 function convertHoursToYearlyKm(weeklyHours){
     let averageSpeed = 35; // NZ average for km/h
     let yearlyHours = weeklyHours*52;
     let yearlyDistance = yearlyHours*averageSpeed;
+
     return yearlyDistance;
 }
 
@@ -49,5 +50,5 @@ function convertElectricityPrice(monthlySpend) {
 }
 
 $(function () {
-    console.log(convertCarbonToTrees(10000))
+    console.log(convertCarbonToTrees(10000));
 }) 
