@@ -20,12 +20,20 @@ function pad(n, width) {
   return (paddingZeros + n);
 }
 
+let treesCount = 20;
+let background = new Background();
 
 // $(...) will run the function you give it when the page is loaded & ready
 $(function () {
   // console.log will log a message or object to the browser developer console
   console.log("page loaded...");
   printCurrentDate();
-
+  background.drawTrees(treesCount);
+  
+  $("#kill-tree-btn").click(function(){
+    treesCount--;
+    background.drawTrees(treesCount);    
+  });
 
 });
+
