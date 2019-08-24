@@ -2,11 +2,8 @@
 
 <head>
   <title>Carbon Footprint</title>
-  <!--
-      Get jQuery via CDN (https://jquery.com/)
-      jQuery is a js framework that gives us some easy to use
-      functions for interacting with webpages and APIs
-    -->
+  <script src="lib/d3/d3.min.js"></script>
+  <script src="lib/nvd3/build/nv.d3.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="index.css">
@@ -117,9 +114,14 @@
 
     <script src="js/tree.js"></script>
     <script src="js/background.js"></script>
+
+    <!-- canvas id="graph-example-01" class="graph-example-01"></canvas>
+    -->
+    <svg id="graph-example-01" height=300 width=300></svg>
+
     <script src="js/visualisation.js"></script>
   
-    <!-- Load our files -->
+    <!-- Load Main-->
     <script type="text/javascript" src="js/main.js"></script>
   
 
