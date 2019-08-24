@@ -67,8 +67,8 @@ $RECYCLE.BIN/
 .VolumeIcon.icns
 
 # Javascript Compiled Files
-*.js
-*.js.map
+# *.js
+# *.js.map
 
 # Javascript Libraries
 lib/
