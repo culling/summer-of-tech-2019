@@ -21,6 +21,34 @@ function Card(title, image, text, link, linkText) {
     }
 }
 
+function getSolutions(){
+    title, image, text, link, linkText
+    let solutions = [
+        {
+            id: 1,
+            title: "Transport",
+            image: "transport-01.svg",
+            text: "Use Mevo, using mevo can be a great way to avoid owning your own car",
+            link: "mevo.co.nz",
+            linkText: "Mevo"
+        },
+        {
+            id: 2,
+            title: "Transport",
+            image: "transport-02.svg",
+            text: "Ditch your car and walk, just using Uber on important and required",
+            link: "uber.com",
+            linkText: "Uber"
+        }
+]
+/**
+"Uber/Ola",
+"Metlink",
+"Jump/Flamingo Scooters" */
+
+}
+
+
 $(function () {
     // console.log will log a message or object to the browser developer console
     console.log("Loaded card.js ...");
