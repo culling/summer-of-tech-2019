@@ -1,120 +1,161 @@
 <html>
 
 <head>
-  <title>Carbon Footprint</title>
-  <!--
+    <title>Carbon Footprint</title>
+    <!--
       Get jQuery via CDN (https://jquery.com/)
       jQuery is a js framework that gives us some easy to use
       functions for interacting with webpages and APIs
     -->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-  <!-- Load our files -->
-  <script type="text/javascript" src="js/main.js"></script>
-  <link rel="stylesheet" type="text/css" href="index.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Load our files -->
+    <script type="text/javascript" src="js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
-  <!-- TODO: Say something interesting in the heading tag... -->
-  <br />
+    <!-- TODO: Say something interesting in the heading tag... -->
+    <br />
 
-<div class="questions">
+    <div class="questions">
 
-  <div class="jumbotron container">
-    <h1>Carbon Footprint</h1>  
-  </div>
-    
-  <div class="jumbotron container">
-      <h2> Let's find out what you can do to help the environment!</h2>
-      <br><br>
-    <h3>Do you use a car?</h3>
-    <hr class="my-4">
-    <p>What do you mainly use it for?</p>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="carusage" id="carusage1" value="option1" checked>
-      <label class="form-check-label" for="exampleRadios1">
-        Leisure
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="carusage" id="carusage2" value="option2">
-      <label class="form-check-label" for="exampleRadios2">
-        Commute (to work/school)
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="carusage" id="carusage3" value="option3">
-      <label class="form-check-label" for="exampleRadios3">
-        Both
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option4">
-      <label class="form-check-label" for="exampleRadios3">
-        Other
-      </label>
-    </div>
-    <div class="form-check">
-      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option5">
-      <label class="form-check-label" for="exampleRadios3">
-        I don't own a car
-      </label>
-    </div>
-    <br>
-    <br>
-    <a class="btn btn-primary btn-lg submit" href="#" role="button">I'm finished</a>
-  </div>
-</div>
-
-<div class="solutions">
-    <div class="jumbotron container">
-        <h2>Here's what you can do to be better</h2>  
-    </div>
-    <div class="jumbotron container">
-        <div class="row">
-          <div class="col-sm plant">
-              <div class="card">
-                  <img class="card-img-top" src="/images/trees.jpg" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title"> Plant some trees!</h5>
-                    <p class="card-text">We don't expect you to plant trees yourself, which is why Trees That Count will do it for you. For every $10 donated, TTC will plant a native NZ tree in your name!</p>
-                    <a href="https://grow.treesthatcount.co.nz/fund/trees" class="btn btn-primary">Fund A Tree</a>
-                  </div>
-                </div>
-          </div>
-          <div class="col-sm">
-              <div class="card">
-                  <img class="card-img-top" src="/images/trees.jpg" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title"> Plant some Trees!</h5>
-                    <p class="card-text"></p>
-                    <a href="https://www.treesthatcount.co.nz/" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-          </div>
-          <div class="col-sm">
-              <div class="card">
-                  <img class="card-img-top" src="/images/trees.jpg" alt="Card image cap">
-                  <div class="card-body">
-                    <h5 class="card-title"> Plant some Trees!</h5>
-                    <p class="card-text"></p>
-                    <a href="https://www.treesthatcount.co.nz/" class="btn btn-primary">Go somewhere</a>
-                  </div>
-                </div>
-          </div>
+        <div class="jumbotron container">
+            <h1>Carbon Footprint</h1>
         </div>
 
-        <div id="canvas-container" class="canvas-container">
-          <canvas id="canvas" height=200 width=200></canvas>
+        <!--Question 1-->
+        <div class="jumbotron container">
+            <h3>Do you own a car?</h3>
+            <hr class="my-4">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="hasCar" id="ownsCar" value="opt1">
+                <label class="form-check-label" for="hasCar">
+                    Yes
+                </label>
+            </div> <!-- Has Car -->
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="hasCar" id="noCar" value="opt2">
+                <label class="form-check-label" for="hasCar">
+                    No
+                </label>
+            </div> <!-- No Car -->
+            <br>
+            <br>
+        </div>
+
+        <!--Question 2-->
+        <div class="jumbotron container">
+            <h3>What do you mainly use your car for?</h3>
+            <hr class="my-4">
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="carusage" id="carusage1" value="option1" checked>
+                    <label class="form-check-label" for="exampleRadios1">
+                        Leisure
+                    </label>
+                </div> 
+            <!-- Leisure -->
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="carusage" id="carusage2" value="option2">
+                <label class="form-check-label" for="exampleRadios2">
+                    Commute (to work/school)
+                </label>
+            </div> <!-- Commute -->
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="carusage" id="carusage3" value="option3">
+                <label class="form-check-label" for="exampleRadios3">
+                    Both
+                </label>
+            </div> <!-- Both -->
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option4">
+                <label class="form-check-label" for="exampleRadios3">
+                    I don't use it.
+                </label>
+            </div> <!-- Don't use -->
+            <br>
+            <br>
         </div>
         
-      </div>
+        <!--Question 3-->
+        <div class="jumbotron container"> 
+            <h3>How many hours per week do you use your car?</h3>
+            <hr class="my-4">
+            <div class="input-group mb-3">
+                <input type="number" class="form-control" aria-label="hours" name="hoursInCar">
+                <div class="input-group-append">
+                    <span class="input-group-text">hours</span>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!--Question 4-->
+        <div class="jumbotron container"> 
+            <h3>How much money do you individually spend on electricity per month (on average)?</h3>
+            <hr class="my-4">
+           <div class="input-group mb-3">
+               <div class="input-group-prepend">
+                   <span class="input-group-text">$</span>
+               </div>
+               <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" name="elecPM">
+           </div>
+        
+        
+    
+        <!-- Submit Button -->
+        <a class="btn btn-primary btn-lg submit" href="#" role="button">I'm finished</a>
 
-      <script src="js/tree.js" ></script>
-      <script src="js/background.js" ></script>
-</div>
+    </div>
+
+    <div class="solutions">
+        <div class="jumbotron container">
+            <h2>Here's what you can do to be better</h2>
+        </div>
+        <div class="jumbotron container">
+            <div class="row">
+                <div class="col-sm plant">
+                    <div class="card">
+                        <img class="card-img-top" src="/images/trees.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title"> Plant some trees!</h5>
+                            <p class="card-text">We don't expect you to plant trees yourself, which is why Trees That Count will do it for you. For every $10 donated, TTC will plant a native NZ tree in your name!</p>
+                            <a href="https://grow.treesthatcount.co.nz/fund/trees" class="btn btn-primary">Fund A Tree</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card">
+                        <img class="card-img-top" src="/images/trees.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title"> Plant some Trees!</h5>
+                            <p class="card-text"></p>
+                            <a href="https://www.treesthatcount.co.nz/" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card">
+                        <img class="card-img-top" src="/images/trees.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title"> Plant some Trees!</h5>
+                            <p class="card-text"></p>
+                            <a href="https://www.treesthatcount.co.nz/" class="btn btn-primary">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="canvas-container" class="canvas-container">
+                <canvas id="canvas" height=200 width=200></canvas>
+            </div>
+
+        </div>
+
+        <script src="js/tree.js"></script>
+        <script src="js/background.js"></script>
+    </div>
 
 </body>
 
