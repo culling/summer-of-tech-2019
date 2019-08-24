@@ -7,13 +7,45 @@ function convertCarbonToTrees(totalCarbonKg){
     return numberOfTrees
 }
 
+
+function provideDataForGraph(totalCarbon) {
+    // generates NZ averages
+    let yearlyKWHAverage = 2798; // average KWH usage in NZ
+    let yearlyKMDrive = 10000; // average KM driven in NZ
+    let nzAverageCarbon = convertUsageToYearlyCarbon(yearlyKWHAverage, yearlyKMDrive);
+    // generates Users values
+    // TODO
+    $()
+
+    return [
+        {
+            key: "Emissions",
+            values: [
+                {
+                    "label": "New Zealand Emission Target 2020",
+                    "value": 80
+                },
+                {
+                    "label": "New Zealand Average",
+                    "value": nzAverageCarbon
+                },
+                {
+                    "label": "Your Impact",
+                    "value": 100
+                }
+            ]
+        }
+    ]
+
+}
+
 /**
  * Converts yearly energy usage into a carbon amount. 
  * @param kwh total kwh used per year
  * @param km total kms driven per year
  * @returns total number of kg of carbon produced yearly
  */
-function covertUsageToYearlyCarbon(kwh, km){
+function convertUsageToYearlyCarbon(kwh, km){
     let electricityConstant = 1.476;
     let petrolConstant = 0.22;
     let carbonFromElectricity = kwh*electricityConstant; // gives carbon in kgs
