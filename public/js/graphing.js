@@ -107,7 +107,4 @@ function convertElectricityPrice(monthlySpend) {
 }
 
 $(function () {
-  $("#hoursInCar").focusout(() => {
-    provideDataForGraph()
-  })
 }) 
