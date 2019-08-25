@@ -61,6 +61,38 @@ $(function () {
     $('.questions').hide();
     $('.solutions').show();
     window.scrollTo(0,0);
+    showGraph();
   })
 
 })
+
+
+function showGraph(){
+
+
+  nv.addGraph(function () {
+    console.log("Add graph hit!");
+
+    let width = $(".graph-container").width();
+    let graph  = document.getElementById('graph-01');
+    console.log("Graph container width: " + width);
+    graph.width = width;
+
+    var chart = nv.models.discreteBarChart()
+      .x(function (d) { return d.label })    //Specify the data accessors.
+      .y(function (d) { return d.value })
+      .staggerLabels(true)    //Too many bars and not enough room? Try staggering labels.
+      .showValues(true)       //...instead, show the bar value right on top of each bar.
+      ;
+
+    d3.select('#graph-01')
+      .datum(provideDataForGraph())
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+    chart.duration = 900;
+    chart.tooltips = false;
+    return chart;
+  });
+
+}
