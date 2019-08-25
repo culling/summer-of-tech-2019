@@ -2,11 +2,11 @@
  * Converts carbon into number of trees needs to offset that carbon over 40 years.
  * @param totalCarbonKg should be carbon in KG
  */
-function convertCarbonToTrees(){
+function provideCarbonForTrees(){
     let userCarbonUsage = generateUserUsage();
     console.log(userCarbonUsage + " kg");
     let numberOfTrees = userCarbonUsage / 1000; // converts to tonnes
-    console.log("number of trees " + numberOfTrees);
+    console.log("number of trees for 40 years " + numberOfTrees);
 
     return numberOfTrees
 }
@@ -27,6 +27,11 @@ function generateUserUsage(){
 }
 
 
+/**
+ * Calls functions within this file and uses values from the form to generate the values needed to
+ * graph results. Compares NZ average, NZ goal, and User carbon values.
+ * @return {{values: *[], key: string}[]} returns the values used by graph.
+ */
 function provideDataForGraph() {
     // generates NZ averages
     let yearlyKWHAverage = 2398; // average KWH usage in NZ
@@ -36,7 +41,7 @@ function provideDataForGraph() {
     let userCarbonUsage = generateUserUsage()
     // carbon goal for 2020 in NZ
     let carbonGoal = 4500
-    convertCarbonToTrees()
+    provideCarbonForTrees()
     return [
         {
             key: "Emissions",
