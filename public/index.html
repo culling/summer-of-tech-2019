@@ -50,8 +50,9 @@
                         <label class="form-check-label" for="noCar">
                             No
                         </label>
-                    </div> <!-- No Car -->
+                    </div><!-- No Car -->
                     <br>
+                    <button type="button" class="btn btn-success nextBut">Next</button>
                     <br>
                 </div>
 
@@ -86,6 +87,7 @@
                         </label>
                     </div> <!-- Don't use -->
                     <br>
+                    <button type="button" class="btn btn-success nextBut">Next</button>
                     <br>
                 </div>
 
@@ -99,13 +101,16 @@
                             <span class="input-group-text">hours</span>
                         </div>
                     </div>
+                    <br>
+                    <a href="#electricity" class="btn btn-success nextBut">Next</a>
                 </div>
             </div>
         </div>
 
+
         <!--Question 4-->
         <div class="wrapper section-right">
-
+            <a name="electricity"></a>
             <img class="questionBackground" src="images/QuestionBackground4.svg">
 
             <div class="section-formbox-right">
@@ -126,14 +131,16 @@
                     </label>
 
                 </div>
+                <br>
+                <button type="button" class="btn btn-success submit">Submit</button>
             </div>
         </div>
-
+    </div>
 
 
 
         <!-- Solutions -->
-        <div class="solutions">
+        <div class="solutions" style="display:none">
 
             <div class="jumbotron container">
                 <h2>Here's what you can do to be better</h2>
@@ -180,38 +187,36 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Card Container-->
-                <!-- Materialize -->
-                <!--
+            <!-- Card Container-->
+            <!-- Materialize -->
+            <!--
                 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
                 -->
 
-                <div id="card-target" class="row"></div>
-                <script src="js/card.js"></script>
+            <div id="card-target" class="row"></div>
+            <script src="js/card.js"></script>
 
-                <!-- Tree Canvas -->
-                <div id="canvas-container" class="canvas-container">
-                    <canvas id="canvas" height=200 width=200></canvas>
-                    <button id="plant-tree-btn" class="btn btn-primary btn-lg">Plant a Tree</button>
-                    <br />
-                    <br />
-
-
-                </div>
+            <!-- Tree Canvas -->
+            <div id="canvas-container" class="canvas-container">
+                <canvas id="canvas" height=200 width=200></canvas>
+                <button id="plant-tree-btn" class="btn btn-primary btn-lg">Plant a Tree</button>
+                <br />
+                <br />
             </div>
         </div>
 
 
-        <script src="js/tree.js"></script>
-        <script src="js/background.js"></script>
-        <script src="js/display-logic.js"></script>
+    <script src="js/tree.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/display-logic.js"></script>
 
 
 
 
-        <!-- Load Main-->
-        <script type="text/javascript" src="js/main.js"></script>
+    <!-- Load Main-->
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>
