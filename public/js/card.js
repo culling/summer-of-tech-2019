@@ -72,7 +72,7 @@ function getSolutions() {
     {
       id: 4,
       title: "Plant Some Trees",
-      image: "tree-01.svg",
+      image: "carbon-offset-01.svg",
       text: "Pay for a tree to be planted. Who is leading the native tree count? Every native tree planted or funded helps grow the count. Check out the planters and funders making a difference.",
       link: "https://www.treesthatcount.co.nz/",
       linkText: "Trees that Count"
@@ -80,7 +80,7 @@ function getSolutions() {
     {
       id: 5,
       title: "Zero-Waste Products",
-      image: "tree-01.svg",
+      image: "carbon-offset-01.svg",
       text: "PLASTIC & WASTE FREE PRODUCTS. Make the switch to using reusable, zero waste & plastic free items today. Everything is packaged with either recyclable, compostable or reusable packaging. All sourced & designed to replace everyday plastic & one use items in your life. ",
       link: "https://thenaturalco.nz/collections/plastic-free-products",
       linkText: "The Natural"
@@ -142,11 +142,13 @@ function getSolutions() {
     {
       id: 13,
       title: "Bring Your Own Container",
-      image: "tree-01.svg",
+      image: "carbon-offset-01.svg",
       text: "Can not get enough of that sushi fix, or maybe noodles are you thing? Most takeaway place will not only be happy for you to use your own container, they will most likely give you a decent discount as well. Ask about this and considering switching to a sushi joint that offers this.",
     },
   ];
   console.log(solutions);
+
+  return solutions;
 }
 
 
@@ -156,12 +158,10 @@ $(function () {
   //let cards = new Array();
   let solutions = getSolutions();
   let solutionsHtml = "";
-  //getSolutions().map(
+
   for (let i = 0; i < solutions.length; i++) {
     solution = solutions[i];
-    //console.log(solution);
     let card = new Card(solution.title, solution.image, solution.text, solution.link, solution.linkText);
-    //cards.push(card);
     solutionsHtml += card.html();
   }
   ;

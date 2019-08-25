@@ -8,7 +8,7 @@ function provideCarbonForTrees(){
     let numberOfTrees = userCarbonUsage / 1000; // converts to tonnes
     console.log("number of trees for 40 years " + numberOfTrees);
 
-    return numberOfTrees
+    return numberOfTrees.toFixed(0);
 }
 
 /**
@@ -37,10 +37,12 @@ function provideDataForGraph() {
     let yearlyKWHAverage = 2398; // average KWH usage in NZ
     let yearlyKMDrive = 5000; // average KM driven in NZ
     let nzAverageCarbon = convertUsageToYearlyCarbon(yearlyKWHAverage, yearlyKMDrive);
+    nzAverageCarbon = nzAverageCarbon.toFixed(1);
     // generates Users values
     let userCarbonUsage = generateUserUsage()
+    userCarbonUsage.toFixed(1);
     // carbon goal for 2020 in NZ
-    let carbonGoal = 4500
+    let carbonGoal = 3500
     provideCarbonForTrees()
     return [
         {
@@ -65,7 +67,7 @@ function provideDataForGraph() {
 }
 
 /**
- * Converts yearly energy usage into a carbon amount. 
+ * Converts yearly energy usage into a carbon amount.
  * @param kwh total kwh used per year
  * @param km total kms driven per year
  * @returns total number of kg of carbon produced yearly
@@ -75,13 +77,13 @@ function convertUsageToYearlyCarbon(kwh, km){
     let petrolConstant = 0.22;
     let carbonFromElectricity = kwh*electricityConstant; // gives carbon in kgs
     let carbonFromPetrol = km*petrolConstant; // gives carbon in kgs
-    
+
     return carbonFromElectricity + carbonFromPetrol;
 }
 
 /**
- * Takes weekly hours spent in a car into average year distance driven. 
- * @param weeklyHours hours spent in car. 
+ * Takes weekly hours spent in a car into average year distance driven.
+ * @param weeklyHours hours spent in car.
  * @returns {number} total distance driven over the year.
  */
 function convertHoursToYearlyKm(weeklyHours){
@@ -94,7 +96,7 @@ function convertHoursToYearlyKm(weeklyHours){
 
 
 /**
- * Converts monthly electricty spend into yearly energy usage. 
+ * Converts monthly electricty spend into yearly energy usage.
  * @param monthlySpend dollars spent on electricty each month.
  * @return {number} yearly kw hour usage.
  */
@@ -102,9 +104,9 @@ function convertElectricityPrice(monthlySpend) {
     let averagePrice = 0.28; // NZ average price per KwH in dollars
     let monthlyKwH = monthlySpend / averagePrice;
     let yearlyKwH = monthlyKwH * 12;
-    
+
     return yearlyKwH;
 }
 
 $(function () {
-}) 
+})

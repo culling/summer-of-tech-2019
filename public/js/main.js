@@ -22,18 +22,28 @@ function pad(n, width) {
 
 let treesCount = 3;
 let background = new Background();
+
+
 //let graphing = new graphing();
 // $(...) will run the function you give it when the page is loaded & ready
 $(function () {
   // console.log will log a message or object to the browser developer console
   console.log("page loaded...");
-  printCurrentDate();
   background.drawTrees(treesCount);
+
+  $('.submit').click(() => {
+    let width = $("#solutions-container").width();
+    let canvas  = document.getElementById('canvas');
+    let context = canvas.getContext('2d');
+    context.canvas.width = width;
+  });
 
   $("#plant-tree-btn").click(function () {
     treesCount++;
     background.drawTrees(treesCount);
   });
+
+
 
   $("#show-graph-btn").click(function () {
 

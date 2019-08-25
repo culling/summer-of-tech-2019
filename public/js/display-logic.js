@@ -60,6 +60,7 @@ $(function () {
   $('.submit').click(() => {
     $('.questions').hide();
     $('.solutions').show();
+
     window.scrollTo(0,0);
     showGraph();
   })
