@@ -25,3 +25,17 @@
   height:100%;
   z-index:-1;
 } */
+
+.card .card-action:last-child {
+  border-radius: 0 0 2px 2px;
+}
+.card .card-action {
+  background-color: inherit;
+  border-top: 1px solid rgba(160,160,160,0.2);
+  position: relative;
+  padding: 16px 24px;
+}
+
+div {
+  display: block;
+}

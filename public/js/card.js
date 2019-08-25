@@ -33,7 +33,6 @@ function Card(title, image, text, link, linkText) {
           '<div class="card-action">' +
             '<a href="' + link + '"><button type="button" class="btn btn-primary">' + linkText + '</button></a>' +
           '</div>' +
-         //'<p class="card-text"><small class="text-muted">' + text + '</small></p>'+
        '</div>'+
      '</div>'+
      '</div>'+
@@ -51,7 +50,7 @@ function getSolutions(){
             id: 1,
             title: "Transport",
             image: "transport-01.svg",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu pharetra dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam quis magna ultricies, fringilla sem eget, fringilla felis. Proin feugiat porta enim, et dapibus libero mattis vitae. Morbi quis volutpat lectus. Donec sagittis erat tortor. Aliquam neque turpis, porta sed porttitor in, viverra non urna. Curabitur porta sit amet sapien a laoreet. Nulla facilisi. Suspendisse eget consectetur enim, quis varius urna. Aenean ac varius mi. Phasellus luctus sollicitudin gravida. Nunc eget nisi ligula. Proin id ipsum id risus dapibus scelerisque ut et mauris. Fusce suscipit mauris leo, sed interdum sapien convallis a.",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu pharetra dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
             link: "mevo.co.nz",
             linkText: "Mevo"
         },
@@ -69,8 +68,8 @@ function getSolutions(){
           title: "Transport",
           image: "cycling-01.svg",
           text: "Is cycling a carbon-friendly thing to do? Emphatically yes! Powered by biscuits, bananas or breakfast cereal, the bike is nearly 10 times more carbon-efficient than the most efficient of petrol cars. Cycling also keeps you healthy, provided you don’t end up under a bus.",
-          link: "uber.com",
-          linkText: "Uber"
+          link: "https://www.myride.co.nz/wellington",
+          linkText: "Buy a Bike"
         },
 
         {
