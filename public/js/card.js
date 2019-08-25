@@ -91,7 +91,7 @@ function getSolutions() {
       image: "transport-02.svg",
       text: "Trains and buses?! Say what? Did you know taking the train produces a 10th of the carbon than driving your own car? Metlink provides convenient, cheaper, and much more environmentally friendly ways to get to where you need to go! You'll be surprised how many stops there are.",
       link: "https://www.metlink.org.nz/",
-      linkText: "Trees that Count"
+      linkText: "Metlink"
     },
     {
       id: 7,
