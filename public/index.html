@@ -1,109 +1,131 @@
 <!doctype html>
 <html>
-    <head>
-        <!-- Mobile Viewport -->
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-        <title>Carbon Footprint</title>
+
+<head>
+    <!-- Mobile Viewport -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>Carbon Footprint</title>
 
 
-        <script src="lib/d3/d3.min.js"></script>
-        <script src="lib/nvd3/build/nv.d3.js"></script>
-        <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="lib/d3/d3.min.js"></script>
+    <script src="lib/nvd3/build/nv.d3.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
 
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
 
-        <!--CSS and Bootstrap-->
-        <link rel="stylesheet" type="text/css" href="index.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    </head>
+    <!--CSS and Bootstrap-->
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
 
-    <body>
-        <div class="questions">
-            <div class="jumbotron container">
-                <h1>Carbon Footprint</h1>
-            </div>
+<body>
+    <div class="questions">
+        <div class="wrapper hero">
+            <h1>How can you improve your carbon footprint?</h1>
+            <h3>Take a minute to answer these questions!</h3>
 
-            <!--Question 1-->
-            <div class="jumbotron container">
-                <h3>Do you own a car?</h3>
-                <hr class="my-4">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="hasCar" id="ownsCar" value="opt1">
-                    <label class="form-check-label" for="hasCar">
-                        Yes
-                    </label>
-                </div> <!-- Has Car -->
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="hasCar" id="noCar" value="opt2">
-                    <label class="form-check-label" for="hasCar">
-                        No
-                    </label>
-                </div> <!-- No Car -->
-                <br>
-                <br>
-            </div>
+            <img id="trees" src="images/tree.svg">
 
-            <!--Question 2-->
-            <div class="jumbotron container">
-                <h3>What do you mainly use your car for?</h3>
-                <hr class="my-4">
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="carusage" id="carusage1" value="option1" checked>
-                    <label class="form-check-label" for="exampleRadios1">
-                        Leisure
-                    </label>
+        </div>
+
+        <!--Transport Questions-->
+        <div class="wrapper section-right">
+
+            <img class="questionBackground" src="images/QuestionBackground1.svg">
+            <div class="section-formbox-right">
+                <!--Question 1-->
+                <div class="question-container" data-num="1">
+                    <h3>Do you own a car?</h3>
+                    <br>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="hasCar" id="ownsCar" value="opt1">
+                        <label class="form-check-label" for="ownsCar">
+                            Yes
+                        </label>
+                    </div> <!-- Has Car -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="hasCar" id="noCar" value="opt2">
+                        <label class="form-check-label" for="noCar">
+                            No
+                        </label>
+                    </div> <!-- No Car -->
+                    <br>
+                    <br>
                 </div>
-                <!-- Leisure -->
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="carusage" id="carusage2" value="option2">
-                    <label class="form-check-label" for="exampleRadios2">
-                        Commute (to work/school)
-                    </label>
-                </div> <!-- Commute -->
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="carusage" id="carusage3" value="option3">
-                    <label class="form-check-label" for="exampleRadios3">
-                        Both
-                    </label>
-                </div> <!-- Both -->
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option4">
-                    <label class="form-check-label" for="exampleRadios3">
-                        I don't use it.
-                    </label>
-                </div> <!-- Don't use -->
-                <br>
-                <br>
-            </div>
 
-            <!--Question 3-->
-            <div class="jumbotron container">
-                <h3>How many hours per week do you use your car?</h3>
-                <hr class="my-4">
-                <div class="input-group mb-3">
-                    <input type="number" class="form-control" aria-label="hours" name="hoursInCar">
-                    <div class="input-group-append">
-                        <span class="input-group-text">hours</span>
+                <!--Question 2-->
+                <div class="question-container" data-num="2" style="display:none">
+                    <h3>What do you mainly use your car for?</h3>
+                    <hr class="my-4">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="carusage" id="car1" value="option1">
+                        <label class="form-check-label" for="car1">
+                            Leisure
+                        </label>
+                    </div>
+                    <!-- Leisure -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="carusage" id="car2" value="option2">
+                        <label class="form-check-label" for="car2">
+                            Commute (to work/school)
+                        </label>
+                    </div> <!-- Commute -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="carusage" id="car3" value="option3">
+                        <label class="form-check-label" for="car3">
+                            Both
+                        </label>
+                    </div> <!-- Both -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="carusage" id="car4" value="option4">
+                        <label class="form-check-label" for="car4">
+                            I don't use it.
+                        </label>
+                    </div> <!-- Don't use -->
+                    <br>
+                    <br>
+                </div>
+
+                <!--Question 3-->
+                <div class="question-container" data-num="3" style="display:none">
+                    <h3>How many hours per week do you use your car?</h3>
+                    <hr class="my-4">
+                    <div class="input-group mb-3">
+                        <input type="number" class="form-control" aria-label="hours" name="hoursInCar">
+                        <div class="input-group-append">
+                            <span class="input-group-text">hours</span>
+                        </div>
                     </div>
                 </div>
-
             </div>
+        </div>
 
-            <!--Question 4-->
-            <div class="jumbotron container">
+        <!--Question 4-->
+        <div class="wrapper section-right">
+
+            <img class="questionBackground" src="images/QuestionBackground4.svg">
+
+            <div class="section-formbox-right">
                 <h3>How much money do you individually spend on electricity per month (on average)?</h3>
                 <hr class="my-4">
                 <div class="input-group mb-3">
                     <div class="input-group-prepend">
                         <span class="input-group-text">$</span>
                     </div>
-                    <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" name="elecPM">
+                    <input type="number" class="form-control" aria-label="elecAmt" name="elecPM" id="elecInput">
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="elecAmt" id="notSure" value="idk">
+                    <label class="form-check-label" for="car1">
+                        I'm not sure.
+                    </label>
                 </div>
             </div>
         </div>
-            
+
         <div class="solutions">
             <div class="jumbotron container">
                 <h2>Here's what you can do to be better</h2>
@@ -158,6 +180,7 @@
 
         <script src="js/tree.js"></script>
         <script src="js/background.js"></script>
+        <script src="js/display-logic.js"></script>
 
         <!-- canvas id="graph-example-01" class="graph-example-01"></canvas -->
         <svg id="graph-example-01" height=300 width=300></svg>
@@ -166,5 +189,6 @@
 
         <!-- Load Main-->
         <script type="text/javascript" src="js/main.js"></script>
-    </body>
+</body>
+
 </html>
