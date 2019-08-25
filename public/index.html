@@ -55,6 +55,7 @@
                     <br>
                 </div>
 
+
                 <!--Question 2-->
                 <div class="question-container" data-num="2" style="display:none">
                     <h3>What do you mainly use your car for?</h3>
@@ -93,7 +94,7 @@
                     <h3>How many hours per week do you use your car?</h3>
                     <hr class="my-4">
                     <div class="input-group mb-3">
-                        <input type="number" class="form-control" aria-label="hours" name="hoursInCar">
+                        <input type="number" class="form-control" aria-label="hours" name="hoursInCar" id="hoursInCar">
                         <div class="input-group-append">
                             <span class="input-group-text">hours</span>
                         </div>
@@ -114,7 +115,8 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text">$</span>
                     </div>
-                    <input type="number" class="form-control" aria-label="elecAmt" name="elecPM" id="elecInput">
+
+                    <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" name="elecPM" id="elecInput">
                 </div>
 
                 <div class="form-check">
@@ -122,15 +124,29 @@
                     <label class="form-check-label" for="car1">
                         I'm not sure.
                     </label>
+
                 </div>
             </div>
         </div>
 
+
+
+
+        <!-- Solutions -->
         <div class="solutions">
+
             <div class="jumbotron container">
                 <h2>Here's what you can do to be better</h2>
             </div>
             <div class="jumbotron container">
+
+                <!-- Graph -->
+                <div id="graph-container" class="graph-container">
+                    <script src="js/graphing.js"></script>
+                    <svg id="graph-01" style="width:100%"></svg>
+                    <button type="button" id="show-graph-btn" class="btn btn-primary">Show Graph</button>
+                </div>
+
                 <div class="row">
                     <div class="col-sm">
                         <div class="card">
@@ -165,13 +181,22 @@
                     </div>
                 </div>
 
+                <!-- Card Container-->
+                <!-- Materialize -->
+                <!--
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+                -->
+
+                <div id="card-target" class="row"></div>
+                <script src="js/card.js"></script>
+
                 <!-- Tree Canvas -->
                 <div id="canvas-container" class="canvas-container">
                     <canvas id="canvas" height=200 width=200></canvas>
                     <button id="plant-tree-btn" class="btn btn-primary btn-lg">Plant a Tree</button>
                     <br />
                     <br />
-                    <span class="fa fa-car"></span>
+
 
                 </div>
             </div>
@@ -182,10 +207,8 @@
         <script src="js/background.js"></script>
         <script src="js/display-logic.js"></script>
 
-        <!-- canvas id="graph-example-01" class="graph-example-01"></canvas -->
-        <svg id="graph-example-01" height=300 width=300></svg>
 
-        <script src="js/visualisation.js"></script>
+
 
         <!-- Load Main-->
         <script type="text/javascript" src="js/main.js"></script>

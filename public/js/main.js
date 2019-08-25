@@ -22,17 +22,47 @@ function pad(n, width) {
 
 let treesCount = 3;
 let background = new Background();
-
+//let graphing = new graphing();
 // $(...) will run the function you give it when the page is loaded & ready
 $(function () {
   // console.log will log a message or object to the browser developer console
   console.log("page loaded...");
   printCurrentDate();
   background.drawTrees(treesCount);
-  
-  $("#plant-tree-btn").click(function(){
+
+  $("#plant-tree-btn").click(function () {
     treesCount++;
-    background.drawTrees(treesCount);    
+    background.drawTrees(treesCount);
+  });
+
+  $("#show-graph-btn").click(function () {
+
+    nv.addGraph(function () {
+      console.log("Add graph hit!");
+
+      let width = $(".graph-container").width();
+      let graph  = document.getElementById('graph-01');
+      console.log("Graph container width: " + width);
+      graph.width = width;
+
+      var chart = nv.models.discreteBarChart()
+        .x(function (d) { return d.label })    //Specify the data accessors.
+        .y(function (d) { return d.value })
+        .staggerLabels(true)    //Too many bars and not enough room? Try staggering labels.
+        .showValues(true)       //...instead, show the bar value right on top of each bar.
+        ;
+
+      d3.select('#graph-01')
+        .datum(provideDataForGraph())
+        .call(chart);
+
+      nv.utils.windowResize(chart.update);
+      chart.duration = 900;
+      chart.tooltips = false;
+      return chart;
+    });
+
+
   });
 
 });
