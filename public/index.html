@@ -13,11 +13,13 @@
 
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        crossorigin="anonymous">
 
     <!--CSS and Bootstrap-->
     <link rel="stylesheet" type="text/css" href="index.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
@@ -126,7 +128,8 @@
                         <span class="input-group-text">$</span>
                     </div>
 
-                    <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" name="elecPM" id="elecInput">
+                    <input type="number" class="form-control" aria-label="Amount (to the nearest dollar)" name="elecPM"
+                        id="elecInput">
                 </div>
 
                 <div class="form-check">
@@ -144,9 +147,10 @@
 
 
 
-        <!-- Solutions -->
-        <div class="solutions" style="display:none">
+    <!-- Solutions -->
+    <div class="solutions" style="display:none">
 
+        <div class="jumbotron container" id="solutions-container">
             <div class="jumbotron container">
                 <h2>Here's what you can do to be better</h2>
             </div>
@@ -165,9 +169,12 @@
                             <img class="card-img-top" src="/images/trees.jpg" alt="Card image cap">
                             <div class="card-body">
                                 <h5 class="card-title"> Plant some trees!</h5>
-                                <p class="card-text">We don't expect you to plant trees yourself, which is why Trees That Count will do it
+                                <p class="card-text">We don't expect you to plant trees yourself, which is why Trees
+                                    That
+                                    Count will do it
                                     for you. For every $10 donated, TTC will plant a native NZ tree in your name!</p>
-                                <a href="https://grow.treesthatcount.co.nz/fund/trees" class="btn btn-primary">Fund A Tree</a>
+                                <a href="https://grow.treesthatcount.co.nz/fund/trees" class="btn btn-primary">Fund A
+                                    Tree</a>
                             </div>
                         </div>
                     </div>
@@ -198,16 +205,19 @@
             <div id="card-target" class="row"></div>
             <script src="js/card.js"></script>
 
-            <!-- Tree Canvas -->
-            <div id="canvas-container" class="canvas-container">
-                <canvas id="canvas" height=200 width=200></canvas>
-                <button id="plant-tree-btn" class="btn btn-primary btn-lg">Plant a Tree</button>
-                <br />
-                <br />
-            </div>
-
-
+            <button id="plant-tree-btn" class="btn btn-primary btn-lg">Plant a Tree</button>
         </div>
+    </div>
+
+    <br />
+    <br />
+    <!-- Tree Canvas -->
+    <div id="canvas-container" class="canvas-container">
+        <canvas id="canvas" height=200 width=100%></canvas>
+
+    </div>
+
+
     <script src="js/tree.js"></script>
     <script src="js/background.js"></script>
     <script src="js/display-logic.js"></script>

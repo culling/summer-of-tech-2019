@@ -63,11 +63,28 @@ $(function () {
     window.scrollTo({ top: 0, left: 0, behaviour: 'auto' });
     $('.solutions').show();
     $('html').css('scroll-behaviour', 'smooth');
-    showGraph();
-  })
 
+    showGraph();
+
+    let hasCar = $("input[name='hasCar']:checked").val();
+    if(hasCar == "opt2"){
+      console.log("User has no car");
+      hideCarSuggestions();
+    }
+
+  })
 })
 
+
+function hideCarSuggestions(){
+  $("#1-card").hide();
+  $("#2-card").hide();
+  $("#3-card").hide();
+  $("#6-card").hide();
+  $("#7-card").hide();
+  $("#8-card").hide();
+
+}
 
 function showGraph(){
 

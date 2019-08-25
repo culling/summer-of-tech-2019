@@ -1,7 +1,7 @@
 
 
 function random(min, max){
-    return Math.floor(Math.random() * (max - min + 1) ) + min; 
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
 
 function createTreeArray(numTrees){
@@ -21,14 +21,14 @@ function createTreeArray(numTrees){
         let treeHeight = (random(MIN_HEIGHT, MAX_HEIGHT)) ;
         let tree = new Tree(treeCenterX, treeBranches, treeHeight);
         trees[i] = tree;
-    } 
+    }
 
-    return trees;    
+    return trees;
 }
 
 
 function Background(){
-    let width = $(".canvas-container").width();
+    let width = $(".questions").width();
     let canvas  = document.getElementById('canvas');
     let context = canvas.getContext('2d');
     context.canvas.width = width;
@@ -44,7 +44,7 @@ function Background(){
             let tree = trees[i];
             tree.draw();
         }
-    }    
+    }
 }
 
 
