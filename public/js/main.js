@@ -32,10 +32,11 @@ $(function () {
   background.drawTrees(treesCount);
 
   $('.submit').click(() => {
-
+    let canvasWidth = $("#canvas-container").width();
     let canvas  = document.getElementById('canvas');
     let context = canvas.getContext('2d');
-    context.canvas.width = window.innerWidth;
+    context.canvas.width = canvasWidth;
+    background.drawTrees(treesCount);
   });
 
   $("#plant-tree-btn").click(function () {
