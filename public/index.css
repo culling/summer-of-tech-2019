@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .purple {
   /* TODO: Add some style definitions for the purple class in here... */
   color: purple;
@@ -40,18 +44,23 @@
 .section-formbox-right{
     position: absolute;
     top: 80px;
-    right: 0px;  
+    right: 0px;
     width: 40%;
     padding: 20px;
     background-color: white;
-    border: 10px solid rgba(0,0,0,0.3);
-/*    border-radius: 3px;*/
+    border: 8px solid rgba(0,0,0,0.1);
+    border-radius: 50px;
 }
 
 #trees{
-    width: calc(100% + 120px);
+    width: calc(90% + 120px);
     margin-left: -60px;
     margin-right: -60px;
+}
+#logo{
+
+    width: 30%;
+    height: 30%;
 }
 
 .wrapper{
@@ -67,7 +76,8 @@
 
 
 .hero{
-    margin-top: 100px;
+    margin-top: 0px;
+    text-align: center;
 }
 
 .hero h1{
