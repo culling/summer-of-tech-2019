@@ -11,7 +11,7 @@ function Card(title, image, text, link, linkText) {
                     '<p>' + text + '</p>' +
                 '</div>' +
                 '<div class="card-action">' +
-                    '<a href="' + link + '">' + linkText + '</a>' +
+                    '<a href="' + link + '"><button type="button" class="btn btn-primary">' + linkText + '</button></a>' +
                 '</div>' +
             '</div>' +
         '</div>' +
@@ -56,19 +56,9 @@ function getSolutions(){
           text: "Pay for a tree to be planted",
           link: "https://thenaturalco.nz/collections/plastic-free-products",
           linkText: "The Natural"
-       }
-
-//         Carbon Offset
-// Trees That Count
-// One Tree Planted
-// Atmosfair
-// Ekos
-
-]
-/**
-"Uber/Ola",
-"Metlink",
-"Jump/Flamingo Scooters" */
+       }];
+       console.log(solutions);
+  return solutions;
 
 }
 
@@ -76,7 +66,18 @@ function getSolutions(){
 $(function () {
     // console.log will log a message or object to the browser developer console
     console.log("Loaded card.js ...");
-    let card = new Card("Test! ", "transport-01.svg", "You should sell your car", "http://trademe.co.nz", "Sell your car here for fast cash");
-    $("#card-target").html(card.html);
+    //let cards = new Array();
+    let solutions = getSolutions();
+    let solutionsHtml = "";
+    //getSolutions().map(
+    for(let i = 0; i < solutions.length; i++){
+      solution = solutions[i];
+      //console.log(solution);
+      let card = new Card(solution.title, solution.image,solution.text, solution.link, solution.linkText);
+      //cards.push(card);
+      solutionsHtml += card.html();
+    };
 
+    //console.log(solutionsHtml);
+    $("#card-target").html(solutionsHtml);
 });
