@@ -2,28 +2,48 @@
  * Converts carbon into number of trees needs to offset that carbon over 40 years.
  * @param totalCarbonKg should be carbon in KG
  */
-function convertCarbonToTrees(totalCarbonKg){
-    let numberOfTrees = totalCarbonKg / 1000 // converts to tonnes
+function convertCarbonToTrees(){
+    let userCarbonUsage = generateUserUsage();
+    console.log(userCarbonUsage + " kg");
+    let numberOfTrees = userCarbonUsage / 1000; // converts to tonnes
+    console.log("number of trees " + numberOfTrees);
+
     return numberOfTrees
 }
 
+/**
+ * Takes the fields values of hours in cars, and monthly spend from the form and converts into
+ * yearly carbon in KG
+ * @return {number} the users carbon usage in kg
+ */
+function generateUserUsage(){
+  let userHoursDriven = $("#hoursInCar").val();
+  let userEnergySpend = $("#elecInput").val();
+  let userKMDrive = convertHoursToYearlyKm(userHoursDriven);
+  let userKWHAverage = convertElectricityPrice(userEnergySpend);
+  let userCarbonUsage = convertUsageToYearlyCarbon(userKWHAverage, userKMDrive);
 
-function provideDataForGraph(totalCarbon) {
+  return userCarbonUsage;
+}
+
+
+function provideDataForGraph() {
     // generates NZ averages
-    let yearlyKWHAverage = 2798; // average KWH usage in NZ
-    let yearlyKMDrive = 10000; // average KM driven in NZ
+    let yearlyKWHAverage = 2398; // average KWH usage in NZ
+    let yearlyKMDrive = 5000; // average KM driven in NZ
     let nzAverageCarbon = convertUsageToYearlyCarbon(yearlyKWHAverage, yearlyKMDrive);
     // generates Users values
-    // TODO
-    $()
-
+    let userCarbonUsage = generateUserUsage()
+    // carbon goal for 2020 in NZ
+    let carbonGoal = 4500
+    convertCarbonToTrees()
     return [
         {
             key: "Emissions",
             values: [
                 {
                     "label": "New Zealand Emission Target 2020",
-                    "value": 80
+                    "value": carbonGoal
                 },
                 {
                     "label": "New Zealand Average",
@@ -31,7 +51,7 @@ function provideDataForGraph(totalCarbon) {
                 },
                 {
                     "label": "Your Impact",
-                    "value": 100
+                    "value": userCarbonUsage
                 }
             ]
         }
@@ -82,5 +102,7 @@ function convertElectricityPrice(monthlySpend) {
 }
 
 $(function () {
-    console.log(convertCarbonToTrees(10000));
+  $("#hoursInCar").focusout(() => {
+    provideDataForGraph()
+  })
 }) 
