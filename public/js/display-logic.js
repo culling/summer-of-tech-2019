@@ -8,9 +8,7 @@ function firstQuestion(){
 
 }
 function displayCarQuestions(){
-
   let q2 = $("#carUsage").val();
-
 }
 
 function skipCarQuestions(){}
@@ -25,6 +23,8 @@ function toggleCarUse(){
     $("#elecInput").removeAttr("disabled");
   }
 }
+
+
 
 function togglePower(){
   let notSure = $("#notSure:checked").length;
@@ -59,9 +59,11 @@ $(function () {
 
   $('.submit').click(() => {
     $('.questions').hide();
+    $('html').css('scroll-behaviour', 'auto');
+    window.scrollTo({ top: 0, left: 0, behaviour: 'auto' });
     $('.solutions').show();
+    $('html').css('scroll-behaviour', 'smooth');
 
-    window.scrollTo(0,0);
     showGraph();
 
     let hasCar = $("input[name='hasCar']:checked").val();
