@@ -1,5 +1,6 @@
 function Card(title, image, text, link, linkText) {
-    let cardHtml = '' +
+  /*  //Materialize Card
+  let cardHtml = '' +
     '<div class="col s12 m6 l3" '+ ' id="' + title +'-card">' +
         //'<h5 class="header"> ' + title + '</h5> ' +
         '<div class="card horizontal">' +
@@ -17,6 +18,27 @@ function Card(title, image, text, link, linkText) {
             '</div>' +
         '</div>' +
     '</div>'
+    */
+
+   let cardHtml = '' +
+   '<div class="card mb-3" style="max-width: 540px;" '+ ' id="' + title +'-card">' +
+   '<div class="row no-gutters">' +
+     '<div class="col-md-4">' +
+       '<img src="/images/' + image + '" class="card-img" alt="...">' +
+     '</div>' +
+     '<div class="col-md-8">' +
+       '<div class="card-body">' +
+          '<h5 class="card-title">' +title +'</h5>' +
+          '<p class="card-text">'+ text +'</p>' +
+          '<div class="card-action">' +
+            '<a href="' + link + '"><button type="button" class="btn btn-primary">' + linkText + '</button></a>' +
+          '</div>' +
+         //'<p class="card-text"><small class="text-muted">' + text + '</small></p>'+
+       '</div>'+
+     '</div>'+
+     '</div>'+
+   '</div>'
+
     this.html = function(){
         return cardHtml;
     }
