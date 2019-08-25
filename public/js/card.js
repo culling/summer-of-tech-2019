@@ -146,7 +146,7 @@ function getSolutions() {
       text: "Can not get enough of that sushi fix, or maybe noodles are you thing? Most takeaway place will not only be happy for you to use your own container, they will most likely give you a decent discount as well. Ask about this and considering switching to a sushi joint that offers this.",
     },
   ];
-  console.log(solutions);
+  //console.log(solutions);
 
   return solutions;
 }
