@@ -29,11 +29,13 @@ function Card(title, image, text, link, linkText) {
      '<div class="col-md-8">' +
        '<div class="card-body">' +
           '<h5 class="card-title">' +title +'</h5>' +
-          '<p class="card-text">'+ text +'</p>' +
-          '<div class="card-action">' +
+          '<p class="card-text">'+ text +'</p>';
+          if(link && linkText){
+            cardHtml += '<div class="card-action">'+
             '<a href="' + link + '"><button type="button" class="btn btn-primary">' + linkText + '</button></a>' +
-          '</div>' +
-       '</div>'+
+          '</div>'
+          }
+    cardHtml += '</div>'+
      '</div>'+
      '</div>'+
    '</div>'
