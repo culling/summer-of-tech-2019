@@ -63,10 +63,26 @@ $(function () {
 
     window.scrollTo(0,0);
     showGraph();
-  })
 
+    let hasCar = $("input[name='hasCar']:checked").val();
+    if(hasCar == "opt2"){
+      console.log("User has no car");
+      hideCarSuggestions();
+    }
+
+  })
 })
 
+
+function hideCarSuggestions(){
+  $("#1-card").hide();
+  $("#2-card").hide();
+  $("#3-card").hide();
+  $("#6-card").hide();
+  $("#7-card").hide();
+  $("#8-card").hide();
+
+}
 
 function showGraph(){
 

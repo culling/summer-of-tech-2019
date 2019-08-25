@@ -1,4 +1,4 @@
-function Card(title, image, text, link, linkText) {
+function Card(title, image, text, link, linkText, id) {
   /*  //Materialize Card
   let cardHtml = '' +
     '<div class="col s12 m6 l3" '+ ' id="' + title +'-card">' +
@@ -21,7 +21,7 @@ function Card(title, image, text, link, linkText) {
     */
 
   let cardHtml = '' +
-    '<div class="card mb-3" style="max-width: 540px;" ' + ' id="' + title + '-card">' +
+    '<div class="card mb-3" style="max-width: 540px;" ' + ' id="' + id + '-card">' +
     '<div class="row no-gutters">' +
     '<div class="col-md-4">' +
     '<img src="/images/' + image + '" class="card-img" alt="...">' +
@@ -161,7 +161,7 @@ $(function () {
 
   for (let i = 0; i < solutions.length; i++) {
     solution = solutions[i];
-    let card = new Card(solution.title, solution.image, solution.text, solution.link, solution.linkText);
+    let card = new Card(solution.title, solution.image, solution.text, solution.link, solution.linkText, solution.id);
     solutionsHtml += card.html();
   }
   ;
