@@ -1,3 +1,7 @@
+let treesCount = 3;
+let background = new Background();
+
+
 function firstQuestion(){
   let q1 = $("#hasCar").val();
   if(q1 === "ownsCar"){
@@ -57,6 +61,11 @@ $(function () {
     }
   });
 
+  $("#plant-tree-btn").click(function () {
+    treesCount++;
+    background.drawTrees(treesCount);
+  });
+
   $('.submit').click(() => {
     $('.questions').hide();
     $('html').css('scroll-behaviour', 'auto');
@@ -72,9 +81,21 @@ $(function () {
       hideCarSuggestions();
     }
 
+    showTrees();
   })
 })
 
+function showTrees(){
+
+  treesCount = provideCarbonForTrees();
+
+  let canvasWidth = $("#canvas-container").width();
+  let canvas  = document.getElementById('canvas');
+  let context = canvas.getContext('2d');
+  context.canvas.width = canvasWidth;
+  background.drawTrees(treesCount);
+
+}
 
 function hideCarSuggestions(){
   $("#1-card").hide();

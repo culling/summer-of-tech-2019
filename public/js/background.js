@@ -6,6 +6,7 @@ function random(min, max){
 
 function createTreeArray(numTrees){
     var canvas  = document.getElementById('canvas');
+    //let canvas  = $('.canvas');
     let height  = canvas.height - (canvas.height /8);
     let width   = canvas.width;
 
@@ -39,7 +40,7 @@ function Background(){
 
     this.drawTrees = function (treesToDraw){
         context.clearRect(0, 0, canvas.width, canvas.height);
-        console.log("Draw Trees");
+        //console.log("Draw Trees");
         for(let i =0 ; i < treesToDraw; i++){
             let tree = trees[i];
             tree.draw();
