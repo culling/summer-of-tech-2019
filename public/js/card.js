@@ -71,19 +71,18 @@ function getSolutions(){
           link: "https://www.myride.co.nz/wellington",
           linkText: "Buy a Bike"
         },
-
         {
             id: 4,
             title: "Carbon Offset",
-            image: "tree-01.svg",
-            text: "Pay for a tree to be planted. Who’s leading the native tree count? Every native tree planted or funded helps grow the count. Check out the planters and funders making a difference.",
+            image: "carbon-offset-01.svg",
+            text: "Pay for a tree to be planted. Who's leading the native tree count? Every native tree planted or funded helps grow the count. Check out the planters and funders making a difference.",
             link: "https://www.treesthatcount.co.nz/",
             linkText: "Trees that Count"
         },
         {
           id: 5,
           title: "Zero-Waste Products",
-          image: "tree-01.svg",
+          image: "zero-waste-products-01.svg",
           text: "PLASTIC & WASTE FREE PRODUCTS. Make the switch to using reusable, zero waste & plastic free items today.           Everything is packaged with either recyclable, compostable or reusable packaging. All sourced & designed to replace everyday plastic & one use items in your life. ",
           link: "https://thenaturalco.nz/collections/plastic-free-products",
           linkText: "The Natural"
