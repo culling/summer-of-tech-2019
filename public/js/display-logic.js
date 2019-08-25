@@ -42,7 +42,7 @@ $(function () {
     togglePower()
   });
 
-  $('input').change((e) => {
+  $('.nextBut').click((e) => {
     let currentContainer = $(e.currentTarget).parents('.question-container');
 
     if (currentContainer.length === 0) return;
@@ -56,5 +56,11 @@ $(function () {
       nextContainer.show();
     }
   });
+
+  $('.submit').click(() => {
+    $('.questions').hide();
+    $('.solutions').show();
+    window.scrollTo(0,0);
+  })
 
 })
