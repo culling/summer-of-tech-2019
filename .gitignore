@@ -50,7 +50,6 @@ Temporary Items
 # Node files and Library
 # =============================
 node_modules/
-#public/lib/
 
 # =============================
 # Mongo data files and Dirctory
