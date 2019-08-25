@@ -1,13 +1,14 @@
 function Card(title, image, text, link, linkText) {
     let cardHtml = '' +
-    '<div class="col s12 m6" '+ ' id="' + title +'-card">' +
-        '<h2 class="header"> ' + title + '</h2> ' +
+    '<div class="col s12 m6 l3" '+ ' id="' + title +'-card">' +
+        //'<h5 class="header"> ' + title + '</h5> ' +
         '<div class="card horizontal">' +
             '<div class="card-image">' +
                 '<img src="../images/' + image + '"> '+
             '</div>' +
             '<div class="card-stacked"> ' +
                 '<div class="card-content">' +
+                  '<h5 class="header"> ' + title + '</h5> ' +
                     '<p>' + text + '</p>' +
                 '</div>' +
                 '<div class="card-action">' +
@@ -28,7 +29,7 @@ function getSolutions(){
             id: 1,
             title: "Transport",
             image: "transport-01.svg",
-            text: "Use Mevo, using mevo can be a great way to avoid owning your own car",
+            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eu pharetra dolor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam quis magna ultricies, fringilla sem eget, fringilla felis. Proin feugiat porta enim, et dapibus libero mattis vitae. Morbi quis volutpat lectus. Donec sagittis erat tortor. Aliquam neque turpis, porta sed porttitor in, viverra non urna. Curabitur porta sit amet sapien a laoreet. Nulla facilisi. Suspendisse eget consectetur enim, quis varius urna. Aenean ac varius mi. Phasellus luctus sollicitudin gravida. Nunc eget nisi ligula. Proin id ipsum id risus dapibus scelerisque ut et mauris. Fusce suscipit mauris leo, sed interdum sapien convallis a.",
             link: "mevo.co.nz",
             linkText: "Mevo"
         },
@@ -42,18 +43,27 @@ function getSolutions(){
         },
 
         {
-            id: 3,
-            title: "Carbon Ofsset",
+          id: 3,
+          title: "Transport",
+          image: "cycling-01.svg",
+          text: "Is cycling a carbon-friendly thing to do? Emphatically yes! Powered by biscuits, bananas or breakfast cereal, the bike is nearly 10 times more carbon-efficient than the most efficient of petrol cars. Cycling also keeps you healthy, provided you don’t end up under a bus.",
+          link: "uber.com",
+          linkText: "Uber"
+        },
+
+        {
+            id: 4,
+            title: "Carbon Offset",
             image: "tree-01.svg",
-            text: "Pay for a tree to be planted",
+            text: "Pay for a tree to be planted. Who’s leading the native tree count? Every native tree planted or funded helps grow the count. Check out the planters and funders making a difference.",
             link: "https://www.treesthatcount.co.nz/",
             linkText: "Trees that Count"
         },
         {
-          id: 4,
+          id: 5,
           title: "Zero-Waste Products",
           image: "tree-01.svg",
-          text: "Pay for a tree to be planted",
+          text: "PLASTIC & WASTE FREE PRODUCTS. Make the switch to using reusable, zero waste & plastic free items today.           Everything is packaged with either recyclable, compostable or reusable packaging. All sourced & designed to replace everyday plastic & one use items in your life. ",
           link: "https://thenaturalco.nz/collections/plastic-free-products",
           linkText: "The Natural"
        }];
