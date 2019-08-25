@@ -68,8 +68,6 @@ function getSolutions() {
       title: "Transport",
       image: "cycling-01.svg",
       text: "Is cycling a carbon-friendly thing to do? Emphatically yes! Powered by biscuits, bananas or breakfast cereal, the bike is much more carbon-efficient than the most efficient of petrol cars. Cycling also keeps you healthy, provided you don’t end up under a bus.",
-      link: "http://www.uber.com",
-      linkText: "Uber"
     },
     {
       id: 4,
