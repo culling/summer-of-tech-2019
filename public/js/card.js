@@ -29,12 +29,13 @@ function Card(title, image, text, link, linkText) {
     '<div class="col-md-8">' +
     '<div class="card-body">' +
     '<h5 class="card-title">' + title + '</h5>' +
-    '<p class="card-text">' + text + '</p>' +
-    '<div class="card-action">' +
-    '<a href="' + link + '"><button type="button" class="btn btn-primary">' + linkText + '</button></a>' +
-    '</div>' +
-    //'<p class="card-text"><small class="text-muted">' + text + '</small></p>'+
-    '</div>' +
+    '<p class="card-text">' + text + '</p>';
+  if (link && linkText) {
+    cardHtml += '<div class="card-action">' +
+      '<a href="' + link + '"><button type="button" class="btn btn-primary">' + linkText + '</button></a>' +
+      '</div>'
+  }
+  cardHtml += '</div>' +
     '</div>' +
     '</div>' +
     '</div>'
@@ -148,8 +149,6 @@ function getSolutions() {
     },
   ];
   console.log(solutions);
-  return solutions;
-
 }
 
 
